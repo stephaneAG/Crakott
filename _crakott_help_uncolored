@@ -1,0 +1,22 @@
+echo -e '
+                                      ######    Crakott \033[1;35mhelp\033[0m    ######
+
+
+                   Using this tool, you can crack owner & user passwords of any PDF file
+
+
+	Usage:
+
+	    short syntax: "<RexExp_universe>" "<RegExp_length>"
+
+ 	      > will try to crack a pdf named 'pdf_to_crack.pdf' in the same directory as Crakotte, and will safe both a 'cracked_pdf.pdf' and a 'original_pdf_password.txt' ifle in the same directory
+
+	    
+	    complete syntax: "<RexExp_universe>" "<RegExp_length>" <file_to_crack> <output_unlocked_file> <saved_password_file>
+
+ 	      > more practical, as we are able to choose where to get & set the files depending on our needs dynamically ( > from another script ? ^;p )
+
+
+
+                                                    ####
+'
