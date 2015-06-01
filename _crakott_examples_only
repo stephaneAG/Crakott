@@ -1,0 +1,18 @@
+echo -e '
+	    to perform a crack, providing only a Regular Expression :
+	    
+	      \033[1;36m>\033[1;34m>\033[0m Using a character universe comporting the letters A, B, C, D, and E, and matching a length between 1 to 5 characters:
+	       \033[1;35m>\033[0m ./crakott.sh \033[1;36m"--universe=[ABCDE]"\033[0m \033[1;34m".{1,5}"\033[0m
+	     
+	      \033[1;36m>\033[1;34m>\033[0m Using a character universe set comporting all upper-case & lower-case letters and all digits, and matching a length of 16 characters:
+               \033[1;35m>\033[0m ./crakott.sh \033[1;36m"--universe-set=7"\033[0m \033[1;34m".{16}"\033[0m
+            
+	    to perform a crack, providing a Regular Expression, as well as a pdf file for input, another for output, and a .txt file for the original .pdf password to be saved into:
+
+              \033[1;36m>\033[1;34m>\033[0m Using a character universe comporting the letters A, B, C, and D, and matching a length between 2 to 4 characters:
+               \033[1;35m>\033[0m ./crakott.sh \033[1;36m"--universe=[ABCD]"\033[0m \033[1;34m".{2,4}"\033[0m \033[1;35m./a_directory/a_pdf_to_crack.pdf ./a_directory/the_cracked_pdf.pdf ./a_directory/the_original_pdf_password.txt\033[0m
+	      
+	      \033[1;36m>\033[1;34m>\033[0m Using a character universe set comporting all upper-case letters, and matching a length between 6 to 16 characters:
+               \033[1;35m>\033[0m ./crakott.sh \033[1;36m"--universe-set=1"\033[0m \033[1;34m".{6,16}"\033[0m  \033[1;35m./a_directory/a_pdf_to_crack.pdf ./a_directory/the_cracked_pdf.pdf ./a_directory/the_original_pdf_password.txt\033[0m
+	
+'
