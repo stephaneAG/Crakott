@@ -1,0 +1,63 @@
+echo -e '
+                                      \033[1;35m#\033[1;34m#\033[1;36m####\033[0m    Crakott \033[1;35mhelp\033[0m   \033[1;36m ####\033[1;34m#\033[1;35m#\033[0m
+
+
+                   Using this tool, you can \033[1;35mcrack\033[0m \033[1;36muser\033[0m \033[1;35m&\033[0m \033[1;36mowner\033[0m passwords of \033[1;35m\033[4;35many\033[0m\033[1;35m PDF file\033[0m
+		   Keep in mind that depending on the length of the password, it may take a while to be cracked
+		
+		   Also, mind providing a \033[1;35mcorrect\033[0m \033[1;36mcharacter universe\033[0m or \033[1;36mcharacter universe set\033[0m \033[4;35mto ensure the cracking will end successfully\033[0m
+		   Note: the bigger the universe / universe-set provided, the longer the computing time (..)
+ 
+
+	\033[4;37mUsage:\033[0m
+
+	    \033[1;36mshort\033[0m \033[1;34msyntax\033[0m: ./crakott.sh \033[1;36m"<RexExp_universe>"\033[0m \033[1;34m"<RegExp_length>"\033[0m
+
+ 	      > will try to crack a pdf named 'pdf_to_crack.pdf' in the same directory as Crakott, and will save both a 'cracked_pdf.pdf' and a 'original_pdf_password.txt' file in the same directory
+
+	    
+	    \033[1;35mcomplete\033[0m \033[1;34msyntax\033[0m: ./crakott.sh \033[1;36m"<RexExp_universe>"\033[0m \033[1;34m"<RegExp_length>"\033[0m \033[1;35m<file_to_crack> <output_unlocked_file> <saved_password_file>\033[0m
+
+ 	      > same as the above, but providing the ability to choose where to get & set the files depending on our needs and not only in Crakott directory (..)
+
+	
+	\033[4;37mExamples:\033[0m
+	
+	    to perform a crack, providing only a Regular Expression :
+	    
+	      \033[1;36m>\033[1;34m>\033[0m Using a character universe comporting the letters A, B, C, D, and E, and matching a length between 1 to 5 characters:
+	       \033[1;35m>\033[0m ./crakott.sh \033[1;36m"--universe=[ABCDE]"\033[0m \033[1;34m".{1,5}"\033[0m
+	     
+	      \033[1;36m>\033[1;34m>\033[0m Using a character universe set comporting all upper-case & lower-case letters and all digits, and matching a length of 16 characters:
+               \033[1;35m>\033[0m ./crakott.sh \033[1;36m"--universe-set=7"\033[0m \033[1;34m".{16}"\033[0m
+            
+	    to perform a crack, providing a Regular Expression, as well as a pdf file for input, another for output, and a .txt file for the original .pdf password to be saved into:
+
+              \033[1;36m>\033[1;34m>\033[0m Using a character universe comporting the letters A, B, C, and D, and matching a length between 2 to 4 characters:
+               \033[1;35m>\033[0m ./crakott.sh \033[1;36m"--universe=[ABCD]"\033[0m \033[1;34m".{2,4}"\033[0m \033[1;35m./a_directory/a_pdf_to_crack.pdf ./a_directory/the_cracked_pdf.pdf ./a_directory/the_original_pdf_password.txt\033[0m
+	      
+	      \033[1;36m>\033[1;34m>\033[0m Using a character universe set comporting all upper-case letters, and matching a length between 6 to 16 characters:
+               \033[1;35m>\033[0m ./crakott.sh \033[1;36m"--universe-set=1"\033[0m \033[1;34m".{6,16}"\033[0m  \033[1;35m./a_directory/a_pdf_to_crack.pdf ./a_directory/the_cracked_pdf.pdf ./a_directory/the_original_pdf_password.txt\033[0m
+	
+	\033[4;37mThanks:\033[0m
+
+	    \033[1;36mpcronin@loyola.edu\033[0m, for the \033[1;34mregldg\033[0m utility ( a regular expression grammar language dictionary generator )
+
+	      > used inside Crakott to generate an 'on-the-fly' dictionary from a given Regular Expression, wich will then be used against the locked pdf using the combinations it holds (..)
+	
+	    \033[1;36mArtifex Software Inc\033[0m, for the \033[1;34mmupdf\033[0m utility ( a lightweight PDF and XPS viewer )
+
+	      > also used within Crakott, to 'crack-open' the locked pdf using sort of a  ~'Brute force / Dictionary attack', breaking its user password, & then removing the owner password as well
+
+	
+	\033[4;37mSpecial thanks:\033[0m
+
+	    \033[1;36mMy Dad\033[0m, who provided me the mindset to challenge myself in cracking a pdf locked by a 16-chars-long password..    .. and in claiming he is wrong [ at least, on this ] ..
+	    \033[1;36mMy Mom\033[0m..  
+	    \033[1;36mMy friends\033[0m..    .. for being my \033[1;36mF\033[0mriends
+	    \033[1;36mMy Girl\033[0m ?..
+
+	    .. and all the \033[1;36mFamily & Stuff\033[0m I miss ..
+
+                                                   \033[1;36m ####\033[1;34m#\033[1;35m#\033[0m
+'
