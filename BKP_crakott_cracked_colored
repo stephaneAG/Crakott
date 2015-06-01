@@ -1,0 +1,69 @@
+# little check for the var passed (..)
+
+# testing the environment variables (..)
+if [ crakott_now_date ]; then
+	crack_start_date=i$crakott_now_date
+fi
+if [ crakott_cracking_done_date ]; then
+        crack_end_date=$crakott_cracking_done_date
+fi
+if [ crakott_testedPswdCounter ]; then
+        combinations_tried=$crakott_testedPswdCounter
+fi
+if [ crakott_p ]; then
+        original_pdf_password=$crakott_p
+fi
+if [ crakott_3 ]; then
+        original_pdf=$crakott_3
+fi
+if [ crakott_4 ]; then
+        cracked_pdf=$crakott_4
+fi
+if [ crakott_5 ]; then
+        password_file=$crakott_5
+fi
+
+# only works with vars from the terminal (..)
+if [ $# = 7 ]; then
+	crack_start_date=$1
+	crack_end_date=$2
+	combinations_tried=$3
+        original_pdf=$4
+	original_pdf_password=$5
+	cracked_pdf=$6
+	password_file=$7
+else
+	#crack_start_date="<crack_start>"
+        #crack_end_date="<crack_end>"
+        #combinations_tried="<tries_number>"
+        #original_pdf="<original_pdf>"
+        #original_pdf_password="<original_pdf_password>"
+        #cracked_pdf="<cracked_pdf>"
+        #password_file="<password_file>"
+fi
+
+echo -e '\033[1;36m
+                                                      _         
+                                                    /\ \        
+                                                   /  \ \       
+                                                  / /\ \ \      
+                                                 / / /\ \ \     
+                                                / / /  \ \ \    
+                                               / / /    \ \ \   
+                                              / / /      \ \ \  
+\033[1;34m                                             / / /________\_\ \   
+                                            / / /______________\  
+\033[1;35m                                            \/_________________/  
+                                            
+\033[1;0m                                            *   PDF FILE CRACKED  *
+
+                               '"Cracking started on:  "'\033[1;36m'"$crack_start_date"'\033[1;0m
+			       '"Cracking ended on:  "'\033[1;36m'"$crack_end_date"'\033[1;0m
+			       '"Combinations tried:  "'\033[1;34m'"$combinations_tried"'\033[1;0m
+
+	        	       '"Original PDF file:  "'\033[1;36m'"$original_pdf"'\033[1;0m
+			       '"Original PDF file password: "'\033[1;34m'" $original_pdf_password"'\033[1;0m
+			       '"Cracked PDF file:  "'\033[1;35m'"$cracked_pdf"'\033[1;0m
+			       '"Original PDF file password saved in:  "'\033[1;35m'"$password_file"'
+\033[0m
+'
